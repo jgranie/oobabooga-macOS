@@ -47,14 +47,14 @@ conda activate python3.10
 ### Clone and build CMake from source
 ### NOTE: This will install in your /usr/local directory tree.
 git clone https://github.com/Kitware/CMake.git
-cd cmake
+cd CMake
 ./bootstrap
 make -j24
 make install
 cd ..
 
 # Make a checkpoint VENV for rollback
-onda activate python3.10
+conda activate python3.10
 conda create --clone python3.10 -n webui.00.base
 
 # It may already be installed from a previous step, but we will need PyTorch re-installed.
